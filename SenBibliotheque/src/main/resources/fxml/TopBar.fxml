@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<HBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.SenBibliotheque.controller.TopBarController"
+      style="-fx-background-color: #f8f9fa; -fx-padding: 8; -fx-alignment: CENTER_RIGHT; -fx-spacing: 8; -fx-border-color: #e5e7eb; -fx-border-width: 0 0 1 0;">
+
+    <!-- Espacement flexible -->
+    <Region HBox.hgrow="ALWAYS"/>
+
+    <!-- Bouton Minimize -->
+    <Button fx:id="minimizeBtn" text="−"
+            style="-fx-font-size: 16; -fx-padding: 8 12; -fx-background-color: transparent; -fx-text-fill: #6b7280; -fx-cursor: hand;"
+            onMouseEntered="#onMinimizeHover"
+            onMouseExited="#onMinimizeExit"
+            onAction="#minimize"/>
+
+    <!-- Bouton Maximize/Restore -->
+    <Button fx:id="maximizeBtn" text="⬜"
+            style="-fx-font-size: 14; -fx-padding: 8 12; -fx-background-color: transparent; -fx-text-fill: #6b7280; -fx-cursor: hand;"
+            onMouseEntered="#onMaximizeHover"
+            onMouseExited="#onMaximizeExit"
+            onAction="#toggleMaximize"/>
+
+    <!-- Bouton Close -->
+    <Button fx:id="closeBtn" text="✕"
+            style="-fx-font-size: 16; -fx-padding: 8 12; -fx-background-color: transparent; -fx-text-fill: #6b7280; -fx-cursor: hand;"
+            onMouseEntered="#onCloseHover"
+            onMouseExited="#onCloseExit"
+            onAction="#close"/>
+</HBox>

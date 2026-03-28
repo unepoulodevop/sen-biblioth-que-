@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane style="-fx-background-color: #f0f9ff; -fx-padding: 0;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SenBibliotheque.controller.modules.AddUserDialogController">
+
+    <VBox spacing="0" style="-fx-padding: 50;                  -fx-background-color: #f0f9ff;">
+
+        <!-- SECTION PRINCIPALE : INFORMATIONS PERSONNELLES ET CONNEXION (CÔTE À CÔTE) -->
+        <HBox spacing="15" style="-fx-alignment: TOP_LEFT;                      -fx-padding: 0;">
+
+            <!-- Gauche : Informations Personnelles -->
+            <VBox spacing="12" style="-fx-padding: 15;                          -fx-background-color: white;                          -fx-border-radius: 4;                          -fx-background-radius: 4;                          -fx-border-color: #a7f3d0;                          -fx-border-width: 1;                          -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);                          HBox.hgrow: ALWAYS;                          -fx-pref-width: 400;                          -fx-min-width: 400;">
+
+                <Label style="-fx-font-size: 13;                               -fx-font-weight: bold;                               -fx-text-fill: #0e7490;" text="📋 Informations Personnelles" />
+
+                <!-- Prénom -->
+                <VBox spacing="4">
+                    <Label style="-fx-font-weight: bold;                                   -fx-text-fill: #333333;                                   -fx-font-size: 11;" text="Prénom *" />
+                    <TextField fx:id="prenomField" promptText="Ex: Jean" style="-fx-padding: 8;                                       -fx-border-radius: 4;                                       -fx-background-radius: 4;                                       -fx-border-color: #a7f3d0;                                       -fx-border-width: 1;                                       -fx-background-color: white;                                       -fx-font-size: 11;                                       -fx-text-fill: #333333;" />
+                </VBox>
+
+                <!-- Nom -->
+                <VBox spacing="4">
+                    <Label style="-fx-font-weight: bold;                                   -fx-text-fill: #333333;                                   -fx-font-size: 11;" text="Nom *" />
+                    <TextField fx:id="nomField" promptText="Ex: Dupont" style="-fx-padding: 8;                                       -fx-border-radius: 4;                                       -fx-background-radius: 4;                                       -fx-border-color: #a7f3d0;                                       -fx-border-width: 1;                                       -fx-background-color: white;                                       -fx-font-size: 11;                                       -fx-text-fill: #333333;" />
+                </VBox>
+
+                <!-- Email -->
+                <VBox spacing="4">
+                    <Label style="-fx-font-weight: bold;                                   -fx-text-fill: #333333;                                   -fx-font-size: 11;" text="Email *" />
+                    <TextField fx:id="emailField" promptText="Ex: jean.dupont@email.com" style="-fx-padding: 8;                                       -fx-border-radius: 4;                                       -fx-background-radius: 4;                                       -fx-border-color: #a7f3d0;                                       -fx-border-width: 1;                                       -fx-background-color: white;                                       -fx-font-size: 11;                                       -fx-text-fill: #333333;" />
+                </VBox>
+
+                <!-- Profil / Rôle -->
+                <VBox spacing="4">
+                    <Label style="-fx-font-weight: bold;                                   -fx-text-fill: #333333;                                   -fx-font-size: 11;" text="Profil / Rôle *" />
+                    <ComboBox fx:id="profilComboBox" style="-fx-padding: 8;                                      -fx-border-radius: 4;                                      -fx-background-radius: 4;                                      -fx-border-color: #a7f3d0;                                      -fx-border-width: 1;                                      -fx-background-color: white;                                      -fx-font-size: 11;" />
+                </VBox>
+
+                <!-- Statut -->
+                <VBox spacing="4">
+                    <Label style="-fx-font-weight: bold;                                   -fx-text-fill: #333333;                                   -fx-font-size: 11;" text="Statut *" />
+                    <ComboBox fx:id="statutComboBox" style="-fx-padding: 8;                                      -fx-border-radius: 4;                                      -fx-background-radius: 4;                                      -fx-border-color: #a7f3d0;                                      -fx-border-width: 1;                                      -fx-background-color: white;                                      -fx-font-size: 11;" />
+                </VBox>
+            </VBox>
+
+            <!-- Droite : Identifiants de Connexion -->
+            <VBox spacing="12" style="-fx-padding: 15;                          -fx-background-color: white;                          -fx-border-radius: 4;                          -fx-background-radius: 4;                          -fx-border-color: #a7f3d0;                          -fx-border-width: 1;                          -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);                          HBox.hgrow: ALWAYS;                          -fx-pref-width: 400;                          -fx-min-width: 400;">
+
+                <Label style="-fx-font-size: 13;                               -fx-font-weight: bold;                               -fx-text-fill: #0e7490;" text="🔐 Identifiants de Connexion" />
+
+                <!-- Login -->
+                <VBox spacing="4">
+                    <Label style="-fx-font-weight: bold;                                   -fx-text-fill: #333333;                                   -fx-font-size: 11;" text="Login (Identifiant) *" />
+                    <TextField fx:id="loginField" promptText="Ex: jdupont" style="-fx-padding: 8;                                       -fx-border-radius: 4;                                       -fx-background-radius: 4;                                       -fx-border-color: #a7f3d0;                                       -fx-border-width: 1;                                       -fx-background-color: white;                                       -fx-font-size: 11;                                       -fx-text-fill: #333333;" />
+                </VBox>
+
+                <!-- Mot de passe avec bouton -->
+                <VBox spacing="4">
+                    <Label style="-fx-font-weight: bold;                                   -fx-text-fill: #333333;                                   -fx-font-size: 11;" text="Mot de Passe Temporaire *" />
+                    <HBox spacing="8" style="-fx-alignment: CENTER_LEFT;">
+                        <PasswordField fx:id="passwordField" promptText="Généré automatiquement" style="-fx-padding: 8;                                               -fx-border-radius: 4;                                               -fx-background-radius: 4;                                               -fx-border-color: #a7f3d0;                                               -fx-border-width: 1;                                               -fx-background-color: white;                                               -fx-font-size: 11;                                               -fx-text-fill: #333333;" HBox.hgrow="ALWAYS" />
+                        <Button onAction="#generatePassword" style="-fx-padding: 8 12;                                        -fx-background-color: #06b6d4;                                        -fx-text-fill: white;                                        -fx-border-radius: 4;                                        -fx-background-radius: 4;                                        -fx-cursor: hand;                                        -fx-font-weight: 500;                                        -fx-font-size: 10;                                        -fx-min-width: 95;                                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);" text="🔄 Générer" />
+                    </HBox>
+                </VBox>
+
+                <!-- Force du mot de passe -->
+                <VBox spacing="4">
+                    <Label style="-fx-font-weight: bold;                                   -fx-text-fill: #333333;                                   -fx-font-size: 11;" text="Force du Mot de Passe" />
+                    <ProgressBar fx:id="passwordStrengthBar" prefHeight="6" style="-fx-accent: #ef4444;" />
+                    <Label fx:id="passwordStrengthLabel" style="-fx-font-size: 10;                                   -fx-text-fill: #ef4444;                                   -fx-font-weight: bold;" text="Faible" />
+                </VBox>
+
+                <!-- Info message -->
+                <VBox spacing="0" style="-fx-padding: 8;                              -fx-background-color: #e0f2fe;                              -fx-border-radius: 4;                              -fx-background-radius: 4;                              -fx-border-color: #06b6d4;                              -fx-border-width: 1;">
+                    <Label style="-fx-font-size: 9;                                   -fx-text-fill: #0e7490;                                   -fx-wrap-text: true;" text="💡 L'utilisateur devra changer ce mot de passe à sa première connexion" />
+                </VBox>
+
+                <!-- CheckBox Force password -->
+                <CheckBox fx:id="forcePasswordCheckBox" style="-fx-font-size: 11;                                  -fx-text-fill: #333333;                                  -fx-font-weight: 500;" text="Forcer le changement du mot de passe à la première connexion" />
+            </VBox>
+        </HBox>
+
+    </VBox>
+</ScrollPane>

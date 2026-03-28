@@ -1,0 +1,168 @@
+/* ============================================
+   SIDEBAR - STYLES MODERNES (Vert Eau)
+   ============================================ */
+
+.sidebar-vbox {
+    -fx-spacing: 0;
+    -fx-padding: 0;
+    -fx-background-color: #0e7490;
+}
+
+/* Header Sidebar */
+.sidebar-header {
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 15;
+    -fx-background-color: #06b6d4;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #0891b2;
+    -fx-spacing: 10;
+}
+
+.sidebar-header .sidebar-header-label {
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* User Info Section */
+.user-info {
+    -fx-padding: 15;
+    -fx-background-color: #0891b2;
+    -fx-border-color: #06b6d4;
+    -fx-border-width: 0 0 1 0;
+    -fx-spacing: 5;
+}
+
+.user-info .label {
+    -fx-text-fill: white;
+}
+
+.user-name {
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.user-role {
+    -fx-font-size: 11;
+    -fx-text-fill: #a7f3d0;
+    -fx-font-weight: 400;
+}
+
+/* Scroll Pane */
+.sidebar-scroll {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-fit-to-width: true;
+}
+
+.sidebar-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.sidebar-scroll .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.sidebar-scroll .scroll-bar:vertical .thumb {
+    -fx-background-color: #67e8f9;
+    -fx-background-radius: 5;
+    -fx-padding: 2;
+}
+
+.sidebar-scroll .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #06b6d4;
+}
+
+/* Menu Items Container */
+.sidebar-menu {
+    -fx-spacing: 8;
+    -fx-padding: 10;
+    -fx-background-color: #0e7490;
+}
+
+/* Menu Items */
+.sidebar-button {
+    -fx-padding: 12 15 !important;
+    -fx-font-size: 12 !important;
+    -fx-alignment: CENTER_LEFT !important;
+    -fx-background-radius: 6 !important;
+    -fx-text-fill: white !important;
+    -fx-border-radius: 6 !important;
+    -fx-cursor: hand !important;
+    -fx-background-color: #0e7490 !important;
+    -fx-font-weight: 500 !important;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #06b6d4 !important;
+    -fx-padding: 12 20 !important;
+    -fx-text-fill: white !important;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 4, 0, 0, 1) !important;
+}
+
+.sidebar-button:pressed {
+    -fx-opacity: 0.85;
+}
+
+.sidebar-button:focused {
+    -fx-border-color: #a7f3d0;
+    -fx-border-width: 2;
+}
+
+/* Active Button */
+.sidebar-button-active {
+    -fx-background-color: #06b6d4 !important;
+    -fx-border-width: 0 !important;
+    -fx-border-left-width: 4 !important;
+    -fx-border-color: #a7f3d0 !important;
+    -fx-text-fill: white !important;
+    -fx-padding: 12 15 12 11 !important;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 4, 0, 0, 1) !important;
+}
+
+.sidebar-button-active:hover {
+    -fx-background-color: #0891b2 !important;
+}
+
+/* Logout Button */
+.logout-button {
+    -fx-padding: 12 15 !important;
+    -fx-font-size: 12 !important;
+    -fx-alignment: CENTER_LEFT !important;
+    -fx-background-radius: 6 !important;
+    -fx-text-fill: white !important;
+    -fx-border-radius: 6 !important;
+    -fx-cursor: hand !important;
+    -fx-background-color: #dc2626 !important;
+    -fx-font-weight: 500 !important;
+}
+
+.logout-button:hover {
+    -fx-background-color: #b91c1c !important;
+    -fx-padding: 12 20 !important;
+    -fx-effect: dropshadow(gaussian, rgba(220, 38, 38, 0.3), 4, 0, 0, 1) !important;
+}
+
+.logout-button:pressed {
+    -fx-opacity: 0.85;
+}
+
+/* Collapse Button */
+.collapse-button {
+    -fx-background-color: transparent !important;
+    -fx-text-fill: white !important;
+    -fx-font-size: 14 !important;
+    -fx-cursor: hand !important;
+    -fx-padding: 8 !important;
+    -fx-border-radius: 4 !important;
+    -fx-background-radius: 4 !important;
+}
+
+.collapse-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.collapse-button:pressed {
+    -fx-opacity: 0.8;
+}

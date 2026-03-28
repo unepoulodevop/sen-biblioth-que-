@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.SenBibliotheque.controller.modules.DashboardModuleBibliothecaireController"
+            style="-fx-background-color: #f0f9ff; -fx-padding: 0;">
+
+    <VBox spacing="20"
+          style="-fx-padding: 20;
+                 -fx-background-color: #f0f9ff;">
+
+        <!-- Titre -->
+        <Label text="📊 Tableau de Bord Bibliothécaire"
+               style="-fx-font-size: 24;
+                      -fx-font-weight: bold;
+                      -fx-text-fill: #0e7490;"/>
+
+        <!-- SECTION 1 : STATISTIQUES PRINCIPALES -->
+        <HBox spacing="15" style="-fx-alignment: TOP_LEFT;">
+
+            <!-- Card 1 : Emprunts en cours -->
+            <VBox spacing="10"
+                  style="-fx-padding: 20;
+                         -fx-background-color: white;
+                         -fx-border-color: #e5e7eb;
+                         -fx-border-width: 1;
+                         -fx-border-radius: 10;
+                         -fx-background-radius: 10;
+                         -fx-pref-width: 280;
+                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 6, 0, 0, 2);">
+
+                <Label text="🔄 Emprunts en cours"
+                       style="-fx-font-size: 12;
+                              -fx-text-fill: #6b7280;
+                              -fx-font-weight: bold;"/>
+
+                <Label fx:id="activeBorrowsLabel"
+                       text="0"
+                       style="-fx-font-size: 32;
+                              -fx-font-weight: bold;
+                              -fx-text-fill: #06b6d4;"/>
+
+                <Label fx:id="borrowsDetailsLabel"
+                       text="À gérer aujourd'hui"
+                       style="-fx-font-size: 11;
+                              -fx-text-fill: #9ca3af;"/>
+            </VBox>
+
+            <!-- Card 2 : Retards -->
+            <VBox spacing="10"
+                  style="-fx-padding: 20;
+                         -fx-background-color: white;
+                         -fx-border-color: #fecaca;
+                         -fx-border-width: 2;
+                         -fx-border-radius: 10;
+                         -fx-background-radius: 10;
+                         -fx-pref-width: 280;
+                         -fx-effect: dropshadow(gaussian, rgba(220,38,38,0.15), 6, 0, 0, 2);">
+
+                <Label text="⏰ Emprunts en retard"
+                       style="-fx-font-size: 12;
+                              -fx-text-fill: #dc2626;
+                              -fx-font-weight: bold;"/>
+
+                <Label fx:id="overdueLabel"
+                       text="0"
+                       style="-fx-font-size: 32;
+                              -fx-font-weight: bold;
+                              -fx-text-fill: #dc2626;"/>
+
+                <Label fx:id="overdueDetailsLabel"
+                       text="À signaler"
+                       style="-fx-font-size: 11;
+                              -fx-text-fill: #ef5350;"/>
+            </VBox>
+
+            <!-- Card 3 : Adhérents actifs -->
+            <VBox spacing="10"
+                  style="-fx-padding: 20;
+                         -fx-background-color: white;
+                         -fx-border-color: #e5e7eb;
+                         -fx-border-width: 1;
+                         -fx-border-radius: 10;
+                         -fx-background-radius: 10;
+                         -fx-pref-width: 280;
+                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 6, 0, 0, 2);
+                         HBox.hgrow: ALWAYS;">
+
+                <Label text="👥 Adhérents actifs"
+                       style="-fx-font-size: 12;
+                              -fx-text-fill: #6b7280;
+                              -fx-font-weight: bold;"/>
+
+                <Label fx:id="activeMembersLabel"
+                       text="0"
+                       style="-fx-font-size: 32;
+                              -fx-font-weight: bold;
+                              -fx-text-fill: #10b981;"/>
+
+                <Label fx:id="membersDetailsLabel"
+                       text="Dont 0 suspendu(s)"
+                       style="-fx-font-size: 11;
+                              -fx-text-fill: #9ca3af;"/>
+            </VBox>
+
+            <Region HBox.hgrow="ALWAYS"/>
+        </HBox>
+
+        <!-- SECTION 2 : TABLEAU DES EMPRUNTS À TRAITER -->
+        <VBox spacing="10"
+              style="-fx-padding: 15;
+                     -fx-background-color: white;
+                     -fx-border-radius: 10;
+                     -fx-background-radius: 10;
+                     -fx-border-color: #e5e7eb;
+                     -fx-border-width: 1;
+                     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 6, 0, 0, 2);
+                     VBox.vgrow: ALWAYS;">
+
+            <Label text="📋 Emprunts à traiter aujourd'hui"
+                   style="-fx-font-size: 13;
+                          -fx-font-weight: bold;
+                          -fx-text-fill: #1f2937;
+                          -fx-padding: 0 0 10 0;"/>
+
+            <TableView fx:id="borrowsToHandleTable"
+                       prefHeight="250"
+                       style="-fx-font-size: 10;"
+                       VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn text="Adhérent" prefWidth="120" resizable="false"/>
+                    <TableColumn text="Livre" prefWidth="150" resizable="false"/>
+                    <TableColumn text="Date d'emprunt" prefWidth="120" resizable="false"/>
+                    <TableColumn text="Retour prévu" prefWidth="120" resizable="false"/>
+                    <TableColumn text="Status" prefWidth="80" resizable="false"/>
+                </columns>
+            </TableView>
+
+            <Label fx:id="borrowsStatus"
+                   text="0 emprunt(s)"
+                   style="-fx-font-size: 10;
+                          -fx-text-fill: #6b7280;
+                          -fx-padding: 8 0 0 0;"/>
+        </VBox>
+
+        <!-- SECTION 3 : TABLEAU DES RETARDS PRIORITAIRES -->
+        <VBox spacing="10"
+              style="-fx-padding: 15;
+                     -fx-background-color: white;
+                     -fx-border-radius: 10;
+                     -fx-background-radius: 10;
+                     -fx-border-color: #fecaca;
+                     -fx-border-width: 2;
+                     -fx-effect: dropshadow(gaussian, rgba(220,38,38,0.15), 6, 0, 0, 2);
+                     VBox.vgrow: ALWAYS;">
+
+            <Label text="⚠️ Retards - Action Prioritaire"
+                   style="-fx-font-size: 13;
+                          -fx-font-weight: bold;
+                          -fx-text-fill: #dc2626;
+                          -fx-padding: 0 0 10 0;"/>
+
+            <TableView fx:id="overdueTable"
+                       prefHeight="250"
+                       style="-fx-font-size: 10;"
+                       VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn text="Adhérent" prefWidth="120" resizable="false"/>
+                    <TableColumn text="Livre" prefWidth="150" resizable="false"/>
+                    <TableColumn text="Retour prévu" prefWidth="120" resizable="false"/>
+                    <TableColumn text="Retard (j)" prefWidth="80" resizable="false"/>
+                    <TableColumn text="Pénalité (FCFA)" prefWidth="120" resizable="false"/>
+                    <TableColumn text="Actions" prefWidth="100" resizable="false"/>
+                </columns>
+            </TableView>
+
+            <Label fx:id="overdueTableStatus"
+                   text="0 retard(s)"
+                   style="-fx-font-size: 10;
+                          -fx-text-fill: #6b7280;
+                          -fx-padding: 8 0 0 0;"/>
+        </VBox>
+
+        <!-- SECTION 4 : INFORMATIONS UTILES -->
+        <VBox spacing="10"
+              style="-fx-padding: 15;
+                     -fx-background-color: #e0f2fe;
+                     -fx-border-radius: 10;
+                     -fx-border-color: #06b6d4;
+                     -fx-border-width: 1;
+                     -fx-effect: dropshadow(gaussian, rgba(6,182,212,0.1), 4, 0, 0, 1);">
+
+            <Label text="ℹ️ Informations Utiles pour le Bibliothécaire"
+                   style="-fx-font-size: 12;
+                          -fx-font-weight: bold;
+                          -fx-text-fill: #0e7490;"/>
+
+            <Label text="• Vous pouvez consulter, ajouter et modifier les adhérents"
+                   style="-fx-font-size: 10;
+                          -fx-text-fill: #0e7490;"/>
+
+            <Label text="• Vous pouvez gérer les emprunts et retours"
+                   style="-fx-font-size: 10;
+                          -fx-text-fill: #0e7490;"/>
+
+            <Label text="• Vous pouvez consulter les livres mais pas les supprimer"
+                   style="-fx-font-size: 10;
+                          -fx-text-fill: #0e7490;"/>
+
+            <Label text="• Les retards sont calculés automatiquement avec pénalités"
+                   style="-fx-font-size: 10;
+                          -fx-text-fill: #0e7490;"/>
+        </VBox>
+
+    </VBox>
+</ScrollPane>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+
+<BorderPane styleClass="login-root"
+            xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.SenBibliotheque.controller.LoginController">
+
+    <center>
+        <StackPane alignment="CENTER">
+
+            <!-- Container Principal -->
+            <HBox styleClass="login-container" spacing="0">
+
+                <!-- LEFT PANEL -->
+                <VBox styleClass="login-left-panel" HBox.hgrow="ALWAYS" minWidth="350">
+                    <Region VBox.vgrow="ALWAYS" />
+
+                    <!-- Logo SB -->
+                    <VBox alignment="CENTER" spacing="15">
+                        <ImageView fitHeight="120" fitWidth="120" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/senbib.png"/>
+                            </image>
+                        </ImageView>
+                    </VBox>
+
+                    <!-- Texte -->
+                    <VBox alignment="CENTER" spacing="15">
+                        <Label text="SenBibliothéque" styleClass="login-title"/>
+                        <Label text="Gestion Bibliothèque Municipale"
+                               wrapText="true"
+                               styleClass="login-subtitle"/>
+                    </VBox>
+
+                    <Label text="Votre espace de gestion bibliothécaire intelligent"
+                           wrapText="true"
+                           styleClass="login-description"/>
+
+                    <Region VBox.vgrow="ALWAYS"/>
+                </VBox>
+                <!-- RIGHT PANEL -->
+                <VBox styleClass="login-right-panel" HBox.hgrow="ALWAYS" minWidth="380">
+
+                    <!-- Header -->
+                    <VBox alignment="TOP_CENTER" spacing="8">
+                        <Label text="Connexion" styleClass="login-form-title"/>
+                        <Label text="Accédez à votre compte" styleClass="login-form-subtitle"/>
+                    </VBox>
+
+                    <!-- Form -->
+                    <VBox spacing="22">
+
+                        <!-- Username -->
+                        <VBox styleClass="login-field-container">
+                            <Label text="Identifiant" styleClass="login-field-label"/>
+                            <TextField fx:id="loginField"
+                                       promptText="Entrez votre identifiant"
+                                       styleClass="login-text-field"/>
+                        </VBox>
+
+                        <!-- Password -->
+                        <VBox styleClass="login-field-container">
+                            <HBox alignment="CENTER_LEFT">
+                                <Label text="Mot de passe" styleClass="login-field-label"/>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Hyperlink text="Mot de passe oublié?"
+                                           onAction="#handleForgotPassword"
+                                           styleClass="login-forgot-password"/>
+                            </HBox>
+
+                            <PasswordField fx:id="passwordField"
+                                           promptText="••••••••••••"
+                                           styleClass="login-password-field"/>
+                        </VBox>
+
+                        <!-- Error -->
+                        <Label fx:id="errorLabel" styleClass="login-error-label"/>
+
+                        <!-- Checkbox -->
+                        <CheckBox fx:id="rememberMeCheckbox"
+                                  text="Se souvenir de moi"
+                                  styleClass="login-remember-checkbox"/>
+
+                        <!-- Button -->
+                        <Button fx:id="loginBtn"
+                                text="Se connecter"
+                                maxWidth="Infinity"
+                                onAction="#handleLogin"
+                                styleClass="login-button"/>
+
+                        <!-- Loader -->
+                        <StackPane>
+                            <ProgressIndicator fx:id="loadingIndicator"
+                                               visible="false"
+                                               maxWidth="30"
+                                               maxHeight="30"
+                                               styleClass="login-loading-indicator"/>
+                        </StackPane>
+
+                    </VBox>
+
+                    <Region VBox.vgrow="ALWAYS"/>
+
+                </VBox>
+
+            </HBox>
+        </StackPane>
+    </center>
+
+</BorderPane>

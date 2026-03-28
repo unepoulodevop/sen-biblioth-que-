@@ -1,0 +1,301 @@
+/* ============================================
+   GLOBAL STYLES - BOOKHOME (Thème Vert Eau)
+   ============================================ */
+
+* {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.root {
+    -fx-background-color: #f0f9ff;  /* Fond global clair */
+    -fx-text-fill: #333333;
+    -fx-font-size: 12;
+
+    /* Palette Vert Eau */
+    -fx-primary: #0891b2;       /* Bleu-vert principal */
+    -fx-primary-dark: #0e7490;  /* Bleu-vert foncé */
+    -fx-primary-light: #67e8f9; /* Bleu-vert très clair */
+    -fx-secondary: #06b6d4;     /* Bleu-vert secondaire */
+    -fx-success: #10b981;       /* Vert succès */
+    -fx-danger: #dc2626;       /* Rouge (pour les erreurs) */
+    -fx-warning: #f59e0b;      /* Orange (pour les alertes) */
+    -fx-info: #06b6d4;         /* Bleu-vert info */
+    -fx-light: #f0f9ff;        /* Fond ultra-clair */
+    -fx-dark: #1e1e1e;         /* Noir */
+    -fx-border: #a7f3d0;       /* Bordure vert eau clair */
+}
+
+/* ===== TYPOGRAPHY ===== */
+.title {
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0e7490;  /* Bleu-vert foncé */
+}
+
+.subtitle {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.label {
+    -fx-text-fill: #333333;
+    -fx-font-size: 12;
+}
+
+.label-header {
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0e7490;
+}
+
+.label-info {
+    -fx-font-size: 10;
+    -fx-text-fill: #666666;
+}
+
+/* ===== CONTROLS ===== */
+.text-field,
+.text-area,
+.password-field {
+    -fx-padding: 8;
+    -fx-font-size: 12;
+    -fx-border-radius: 4;
+    -fx-border-color: #a7f3d0;  /* Bordure vert eau */
+    -fx-background-color: white;
+    -fx-text-fill: #333333;
+    -fx-control-inner-background: white;
+    -fx-focus-color: #06b6d4;
+    -fx-faint-focus-color: rgba(6, 182, 212, 0.1);
+}
+
+.text-field:focused,
+.text-area:focused,
+.password-field:focused {
+    -fx-border-color: #06b6d4;
+    -fx-border-width: 2;
+}
+
+.combo-box {
+    -fx-padding: 8;
+    -fx-border-color: #a7f3d0;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-color: white;
+    -fx-text-fill: #333333;
+    -fx-font-size: 12;
+}
+
+.combo-box:focused {
+    -fx-border-color: #06b6d4;
+    -fx-border-width: 2;
+}
+
+.date-picker {
+    -fx-padding: 8;
+    -fx-border-color: #a7f3d0;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-color: white;
+    -fx-font-size: 12;
+}
+
+.date-picker:focused {
+    -fx-border-color: #06b6d4;
+    -fx-border-width: 2;
+}
+
+/* ===== BUTTONS ===== */
+.button {
+    -fx-font-size: 12;
+    -fx-padding: 8 16;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+    -fx-font-weight: 500;
+}
+
+.button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0, 0, 2);
+}
+
+.button:pressed {
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.button:disabled {
+    -fx-opacity: 0.5;
+    -fx-cursor: default;
+}
+
+.button-primary {
+    -fx-background-color: #06b6d4;  /* Bleu-vert secondaire */
+    -fx-text-fill: white;
+}
+
+.button-primary:hover {
+    -fx-background-color: #0891b2;  /* Bleu-vert principal au survol */
+}
+
+.button-success {
+    -fx-background-color: #10b981;  /* Vert succès */
+    -fx-text-fill: white;
+}
+
+.button-danger {
+    -fx-background-color: #dc2626;
+    -fx-text-fill: white;
+}
+
+.button-warning {
+    -fx-background-color: #f59e0b;
+    -fx-text-fill: #333333;
+}
+
+.button-info {
+    -fx-background-color: #06b6d4;
+    -fx-text-fill: white;
+}
+
+.button-light {
+    -fx-background-color: #f0f9ff;
+    -fx-text-fill: #0e7490;
+    -fx-border-color: #a7f3d0;
+    -fx-border-width: 1;
+}
+
+/* ===== TABLES ===== */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #a7f3d0;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f0f9ff;
+    -fx-border-color: #a7f3d0;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0e7490;
+    -fx-padding: 8;
+}
+
+.table-row-cell {
+    -fx-padding: 8;
+    -fx-border-color: #e0f2fe;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #e0f2fe;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #06b6d4;
+    -fx-text-fill: white;
+}
+
+/* ===== SCROLL BARS ===== */
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #a7f3d0;
+}
+
+.scroll-bar:vertical .thumb:hover,
+.scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #06b6d4;
+}
+
+/* ===== PROGRESS INDICATORS ===== */
+.progress-indicator {
+    -fx-progress-color: #06b6d4;
+}
+
+.progress-bar .bar {
+    -fx-background-color: #06b6d4;
+}
+
+/* ===== TABS ===== */
+.tab-pane {
+    -fx-background-color: white;
+    -fx-border-color: #a7f3d0;
+}
+
+.tab {
+    -fx-background-color: #f0f9ff;
+    -fx-text-fill: #666666;
+    -fx-border-color: #a7f3d0;
+}
+
+.tab:selected {
+    -fx-background-color: white;
+    -fx-text-fill: #06b6d4;
+    -fx-border-color: #06b6d4;
+}
+
+/* ===== DIALOGS ===== */
+.dialog-pane {
+    -fx-background-color: white;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #06b6d4;
+}
+
+/* ===== CUSTOM CLASSES (Cartes, Boîtes) ===== */
+.card {
+    -fx-background-color: white;
+    -fx-border-color: #a7f3d0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 2);
+}
+
+.card-header {
+    -fx-text-fill: #0e7490;
+    -fx-border-color: #a7f3d0;
+}
+
+.info-box {
+    -fx-background-color: #e0f2fe;
+    -fx-border-color: #06b6d4;
+}
+
+.success-box {
+    -fx-background-color: #dcfce7;
+    -fx-border-color: #10b981;
+}
+
+.error-box {
+    -fx-background-color: #fee2e2;
+    -fx-border-color: #dc2626;
+}
+
+.warning-box {
+    -fx-background-color: #fef3c7;
+    -fx-border-color: #f59e0b;
+}
+
+/* ===== HYPERLINKS ===== */
+.hyperlink {
+    -fx-text-fill: #06b6d4;
+}
+
+.hyperlink:hover {
+    -fx-underline: true;
+}
+
+/* ===== WINDOW CONTROLS (Top Bar) ===== */
+.window-controls-container {
+    -fx-background-color: #06b6d4;
+}
+
+.window-control-btn {
+    -fx-text-fill: white;
+}
+
+.window-close-btn {
+    -fx-text-fill: #ff6b6b;
+}
+
+.window-close-btn:hover {
+    -fx-background-color: #dc2626;
+}

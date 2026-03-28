@@ -1,0 +1,44 @@
+/* ============================================
+   WINDOW CONTROLS - STYLES (Gris Clair)
+   ============================================ */
+
+.window-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #d1d5db;  /* Gris clair */
+    -fx-padding: 5 10;
+    -fx-font-size: 16;
+    -fx-cursor: hand;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-transition: all 0.2s ease;
+}
+
+.window-btn:hover {
+    -fx-background-color: #4b5563;  /* Gris moyen au survol */
+}
+
+.window-btn:pressed {
+    -fx-opacity: 0.8;
+    -fx-background-color: #374151;  /* Gris foncé quand pressé */
+}
+
+.window-btn-close {
+    -fx-background-color: transparent;
+    -fx-text-fill: #d1d5db;  /* Gris clair */
+    -fx-padding: 5 10;
+    -fx-font-size: 16;
+    -fx-cursor: hand;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-transition: all 0.2s ease;
+}
+
+.window-btn-close:hover {
+    -fx-background-color: #dc3545;  /* Rouge pour indiquer la fermeture */
+    -fx-text-fill: white;  /* Texte blanc au survol */
+}
+
+.window-btn-close:pressed {
+    -fx-opacity: 0.8;
+    -fx-background-color: #b91b1b;  /* Rouge plus foncé quand pressé */
+}

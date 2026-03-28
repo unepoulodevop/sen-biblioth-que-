@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.SenBibliotheque.controller.modules.BooksModuleController"
+      spacing="15"
+      style="-fx-padding: 20; -fx-background-color: #f0f9ff;">
+
+    <!-- Titre de la page -->
+    <Label text="📖 Gestion des Livres"
+           style="-fx-font-size: 24;
+                  -fx-font-weight: bold;
+                  -fx-text-fill: #0e7490;"/>
+
+    <!-- Barre d'outils (Recherche + Filtres à gauche, Bouton ajouter à droite) -->
+    <HBox spacing="15"
+          style="-fx-alignment: CENTER_LEFT;
+                 -fx-padding: 15;
+                 -fx-background-color: white;
+                 -fx-border-radius: 10;
+                 -fx-background-radius: 10;
+                 -fx-border-color: #e5e7eb;
+                 -fx-border-width: 1;
+                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 6, 0, 0, 2);">
+
+        <!-- Groupe de recherche et filtres (Gauche) -->
+        <HBox spacing="10" style="-fx-alignment: CENTER_LEFT;">
+            <ComboBox fx:id="filterCategory"
+                      promptText="🏷️ Catégorie"
+                      style="-fx-padding: 10;
+                             -fx-border-radius: 6;
+                             -fx-background-radius: 6;
+                             -fx-min-width: 160;
+                             -fx-border-color: #a7f3d0;
+                             -fx-border-width: 1;
+                             -fx-font-size: 11;"/>
+
+            <TextField fx:id="searchField"
+                       promptText="🔍 Titre, auteur ou ISBN..."
+                       style="-fx-padding: 10;
+                              -fx-border-radius: 6;
+                              -fx-background-radius: 6;
+                              -fx-min-width: 300;
+                              -fx-border-color: #a7f3d0;
+                              -fx-border-width: 1;
+                              -fx-font-size: 11;"/>
+
+            <Button text="🔍 Rechercher"
+                    style="-fx-padding: 10 20;
+                           -fx-background-color: #06b6d4;
+                           -fx-text-fill: white;
+                           -fx-border-radius: 6;
+                           -fx-background-radius: 6;
+                           -fx-cursor: hand;
+                           -fx-font-weight: bold;
+                           -fx-font-size: 11;
+                           -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 1);"
+                    onAction="#rechercher"/>
+        </HBox>
+
+        <Region HBox.hgrow="ALWAYS"/>
+
+        <!-- Bouton Ajouter (Droite) -->
+        <Button text="➕ Ajouter Livre"
+                style="-fx-padding: 10 20;
+                       -fx-background-color: #10b981;
+                       -fx-text-fill: white;
+                       -fx-border-radius: 6;
+                       -fx-background-radius: 6;
+                       -fx-font-weight: bold;
+                       -fx-font-size: 11;
+                       -fx-cursor: hand;
+                       -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 1);"
+                onAction="#ajouterLivre"/>
+    </HBox>
+
+    <!-- Tableau des livres -->
+    <VBox style="-fx-padding: 15;
+                 -fx-background-color: white;
+                 -fx-border-radius: 10;
+                 -fx-background-radius: 10;
+                 -fx-border-color: #e5e7eb;
+                 -fx-border-width: 1;
+                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 6, 0, 0, 2);"
+          VBox.vgrow="ALWAYS">
+
+        <Label text="📚 Liste des livres"
+               style="-fx-font-size: 13;
+                      -fx-font-weight: bold;
+                      -fx-text-fill: #1f2937;
+                      -fx-padding: 0 0 10 0;"/>
+
+        <TableView fx:id="booksTable"
+                   VBox.vgrow="ALWAYS"
+                   style="-fx-font-size: 11;
+                          -fx-padding: 0;
+                          -fx-border-color: #e5e7eb;"/>
+    </VBox>
+
+    <!-- Pied de page (Statut) -->
+    <HBox style="-fx-alignment: CENTER_LEFT;
+                 -fx-padding: 10;
+                 -fx-background-color: white;
+                 -fx-border-radius: 10;
+                 -fx-background-radius: 10;
+                 -fx-border-color: #e5e7eb;
+                 -fx-border-width: 1;">
+
+        <Label fx:id="statusLabel"
+               text="0 livre(s)"
+               style="-fx-font-size: 11;
+                      -fx-text-fill: #6b7280;
+                      -fx-font-weight: 500;"/>
+    </HBox>
+
+</VBox>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.SenBibliotheque.controller.modules.AddCategoryDialogController"
+            style="-fx-background-color: #f0f9ff; -fx-padding: 0;">
+
+    <VBox spacing="0"
+          style="-fx-padding: 20;
+                 -fx-background-color: #f0f9ff;">
+
+        <!-- SECTION PRINCIPALE : INFORMATIONS ET DÉTAILS (CÔTE À CÔTE) -->
+        <HBox spacing="15"
+              style="-fx-alignment: TOP_LEFT;
+                     -fx-padding: 0;">
+
+            <!-- Gauche : Informations de la catégorie -->
+            <VBox spacing="12"
+                  style="-fx-padding: 15;
+                         -fx-background-color: white;
+                         -fx-border-radius: 4;
+                         -fx-background-radius: 4;
+                         -fx-border-color: #a7f3d0;
+                         -fx-border-width: 1;
+                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+                         HBox.hgrow: ALWAYS;
+                         -fx-pref-width: 400;
+                         -fx-min-width: 400;">
+
+                <Label text="🏷️ Informations de la Catégorie"
+                       style="-fx-font-size: 13;
+                              -fx-font-weight: bold;
+                              -fx-text-fill: #0e7490;"/>
+
+                <!-- Libellé -->
+                <VBox spacing="4">
+                    <Label text="Libellé (Nom) *"
+                           style="-fx-font-weight: bold;
+                                  -fx-text-fill: #333333;
+                                  -fx-font-size: 11;"/>
+                    <TextField fx:id="libelleField"
+                               promptText="Ex: Romans, Science-Fiction, Histoire..."
+                               style="-fx-padding: 8;
+                                      -fx-border-radius: 4;
+                                      -fx-background-radius: 4;
+                                      -fx-border-color: #a7f3d0;
+                                      -fx-border-width: 1;
+                                      -fx-background-color: white;
+                                      -fx-font-size: 11;
+                                      -fx-text-fill: #333333;"/>
+                </VBox>
+
+                <!-- Description -->
+                <VBox spacing="4"
+                      style="VBox.vgrow: ALWAYS;">
+                    <Label text="Description (Optionnel)"
+                           style="-fx-font-weight: bold;
+                                  -fx-text-fill: #333333;
+                                  -fx-font-size: 11;"/>
+                    <TextArea fx:id="descriptionArea"
+                              promptText="Entrez une description pour cette catégorie..."
+                              wrapText="true"
+                              prefRowCount="6"
+                              style="-fx-padding: 8;
+                                     -fx-border-radius: 4;
+                                     -fx-background-radius: 4;
+                                     -fx-border-color: #a7f3d0;
+                                     -fx-border-width: 1;
+                                     -fx-background-color: white;
+                                     -fx-font-size: 11;
+                                     -fx-text-fill: #333333;
+                                     -fx-control-inner-background: white;"
+                              VBox.vgrow="ALWAYS"/>
+                </VBox>
+            </VBox>
+
+            <!-- Droite : Informations de gestion -->
+            <VBox spacing="12"
+                  style="-fx-padding: 15;
+                         -fx-background-color: white;
+                         -fx-border-radius: 4;
+                         -fx-background-radius: 4;
+                         -fx-border-color: #a7f3d0;
+                         -fx-border-width: 1;
+                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+                         HBox.hgrow: ALWAYS;
+                         -fx-pref-width: 400;
+                         -fx-min-width: 400;">
+
+                <Label text="ℹ️ Statistiques"
+                       style="-fx-font-size: 13;
+                              -fx-font-weight: bold;
+                              -fx-text-fill: #0e7490;"/>
+
+                <!-- Nombre de livres -->
+                <VBox spacing="6"
+                      style="-fx-padding: 12;
+                             -fx-background-color: #f0f9ff;
+                             -fx-border-radius: 4;
+                             -fx-background-radius: 4;
+                             -fx-border-color: #a7f3d0;
+                             -fx-border-width: 1;">
+
+                    <Label text="📚 Nombre de Livres"
+                           style="-fx-font-weight: bold;
+                                  -fx-text-fill: #333333;
+                                  -fx-font-size: 11;"/>
+
+                    <Label fx:id="booksCountLabel"
+                           text="0 livre(s)"
+                           style="-fx-font-size: 14;
+                                  -fx-font-weight: bold;
+                                  -fx-text-fill: #0e7490;
+                                  -fx-padding: 8 0;"/>
+                </VBox>
+
+                <!-- Info utile -->
+                <VBox spacing="6"
+                      style="-fx-padding: 12;
+                             -fx-background-color: #e0f2fe;
+                             -fx-border-radius: 4;
+                             -fx-background-radius: 4;
+                             -fx-border-color: #06b6d4;
+                             -fx-border-width: 1;">
+
+                    <Label text="💡 Informations"
+                           style="-fx-font-weight: bold;
+                                  -fx-text-fill: #0e7490;
+                                  -fx-font-size: 11;"/>
+
+                    <Label text="Les catégories permettent d'organiser et de classer les livres dans votre bibliothèque. Assurez-vous que le libellé est unique."
+                           style="-fx-font-size: 10;
+                                  -fx-text-fill: #0e7490;
+                                  -fx-wrap-text: true;
+                                  -fx-line-spacing: 2;"/>
+                </VBox>
+
+                <Region VBox.vgrow="ALWAYS"/>
+            </VBox>
+        </HBox>
+
+        <!-- MESSAGE D'ERREUR -->
+        <VBox spacing="0"
+              style="-fx-padding: 10;
+                     -fx-margin: 15 0 0 0;
+                     -fx-background-color: #fee2e2;
+                     -fx-border-radius: 4;
+                     -fx-background-radius: 4;
+                     -fx-border-color: #dc2626;
+                     -fx-border-width: 1;">
+
+            <Label fx:id="errorLabel"
+                   text=""
+                   style="-fx-text-fill: #dc2626;
+                          -fx-wrap-text: true;
+                          -fx-font-size: 10;
+                          -fx-font-weight: bold;"/>
+        </VBox>
+
+    </VBox>
+</ScrollPane>

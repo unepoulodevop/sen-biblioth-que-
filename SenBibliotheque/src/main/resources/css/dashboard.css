@@ -1,0 +1,162 @@
+/* ============================================
+   DASHBOARD - STYLES MODERNES (Vert Eau)
+   ============================================ */
+
+* {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.root {
+    -fx-background-color: #f0f9ff;
+}
+
+/* ===== TITLE BAR ===== */
+.title-bar {
+    -fx-padding: 15 !important;
+    -fx-spacing: 15 !important;
+    -fx-background-color: #06b6d4 !important;
+    -fx-border-color: #0891b2 !important;
+    -fx-border-width: 0 0 1 0 !important;
+    -fx-alignment: CENTER_LEFT !important;
+    -fx-pref-height: 50 !important;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 3, 0, 0, 1);
+}
+
+.title-bar-label {
+    -fx-text-fill: white !important;
+    -fx-font-size: 14 !important;
+    -fx-font-weight: bold !important;
+}
+
+.window-button {
+    -fx-background-color: transparent !important;
+    -fx-text-fill: white !important;
+    -fx-font-size: 14 !important;
+    -fx-font-weight: bold !important;
+    -fx-padding: 5 12 !important;
+    -fx-cursor: hand !important;
+    -fx-border-radius: 4 !important;
+    -fx-background-radius: 4 !important;
+}
+
+.window-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.15) !important;
+    -fx-text-fill: white !important;
+}
+
+.window-button:pressed {
+    -fx-background-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.close-button:hover {
+    -fx-background-color: #dc2626 !important;
+    -fx-text-fill: white !important;
+}
+
+.close-button:pressed {
+    -fx-background-color: #b91c1c !important;
+}
+
+.content-pane {
+    -fx-background-color: #f0f9ff !important;
+    -fx-padding: 20 !important;
+}
+
+/* ===== LABELS ===== */
+.label {
+    -fx-text-fill: #333333;
+}
+
+/* ===== TEXT FIELDS ===== */
+.text-field, .password-field, .text-area {
+    -fx-padding: 10;
+    -fx-font-size: 12;
+    -fx-border-radius: 6;
+    -fx-border-color: #a7f3d0;
+    -fx-background-color: white;
+    -fx-text-fill: #333333;
+    -fx-control-inner-background: white;
+}
+
+.text-field:focused, .password-field:focused, .text-area:focused {
+    -fx-border-color: #06b6d4;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(6, 182, 212, 0.3), 8, 0, 0, 3);
+}
+
+/* ===== BUTTONS ===== */
+.button {
+    -fx-font-size: 12;
+    -fx-padding: 10 18;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-font-weight: 500;
+}
+
+.button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 6, 0, 0, 2);
+}
+
+.button-primary {
+    -fx-background-color: #06b6d4;
+    -fx-text-fill: white;
+}
+
+.button-success {
+    -fx-background-color: #10b981;
+    -fx-text-fill: white;
+}
+
+.button-danger {
+    -fx-background-color: #dc2626;
+    -fx-text-fill: white;
+}
+
+/* ===== COMBO BOX ===== */
+.combo-box {
+    -fx-padding: 10;
+    -fx-border-color: #a7f3d0;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-background-color: white;
+    -fx-font-size: 12;
+}
+
+.combo-box:focused {
+    -fx-border-color: #06b6d4;
+    -fx-border-width: 2;
+}
+
+/* ===== TABLES ===== */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #e5e7eb;
+    -fx-font-size: 11;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f3f4f6;
+    -fx-border-color: #e5e7eb;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0e7490;
+    -fx-padding: 10;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #f0f9ff;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #cffafe;
+}
+
+/* ===== SCROLL BARS ===== */
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #a7f3d0;
+    -fx-background-radius: 5;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #06b6d4;
+}

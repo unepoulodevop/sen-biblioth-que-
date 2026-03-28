@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.SenBibliotheque.controller.modules.AddMemberDialogController"
+            style="-fx-background-color: #f0f9ff; -fx-padding: 0;">
+
+    <VBox spacing="0"
+          style="-fx-padding: 20;
+                 -fx-background-color: #f0f9ff;">
+
+        <!-- SECTION PRINCIPALE : INFORMATIONS PERSONNELLES ET GESTION (CÔTE À CÔTE) -->
+        <HBox spacing="15"
+              style="-fx-alignment: TOP_LEFT;
+                     -fx-padding: 0;">
+
+            <!-- Gauche : Informations Personnelles -->
+            <VBox spacing="12"
+                  style="-fx-padding: 15;
+                         -fx-background-color: white;
+                         -fx-border-radius: 4;
+                         -fx-background-radius: 4;
+                         -fx-border-color: #a7f3d0;
+                         -fx-border-width: 1;
+                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+                         HBox.hgrow: ALWAYS;
+                         -fx-min-width: 0;
+                         -fx-pref-width: 300;">
+
+                <Label text="👤 Informations Personnelles"
+                       style="-fx-font-size: 13;
+                              -fx-font-weight: bold;
+                              -fx-text-fill: #0e7490;"/>
+
+                <!-- Prénom -->
+                <VBox spacing="4">
+                    <Label text="Prénom *"
+                           style="-fx-font-weight: bold;
+                                  -fx-text-fill: #333333;
+                                  -fx-font-size: 11;"/>
+                    <TextField fx:id="prenomField"
+                               promptText="Ex: Jean"
+                               style="-fx-padding: 8;
+                                      -fx-border-radius: 4;
+                                      -fx-background-radius: 4;
+                                      -fx-border-color: #a7f3d0;
+                                      -fx-border-width: 1;
+                                      -fx-background-color: white;
+                                      -fx-font-size: 11;
+                                      -fx-text-fill: #333333;
+                                      -fx-max-width: Infinity;"/>
+                </VBox>
+
+                <!-- Nom -->
+                <VBox spacing="4">
+                    <Label text="Nom *"
+                           style="-fx-font-weight: bold;
+                                  -fx-text-fill: #333333;
+                                  -fx-font-size: 11;"/>
+                    <TextField fx:id="nomField"
+                               promptText="Ex: Dupont"
+                               style="-fx-padding: 8;
+                                      -fx-border-radius: 4;
+                                      -fx-background-radius: 4;
+                                      -fx-border-color: #a7f3d0;
+                                      -fx-border-width: 1;
+                                      -fx-background-color: white;
+                                      -fx-font-size: 11;
+                                      -fx-text-fill: #333333;
+                                      -fx-max-width: Infinity;"/>
+                </VBox>
+
+                <!-- Email -->
+                <VBox spacing="4">
+                    <Label text="Email *"
+                           style="-fx-font-weight: bold;
+                                  -fx-text-fill: #333333;
+                                  -fx-font-size: 11;"/>
+                    <TextField fx:id="emailField"
+                               promptText="Ex: jean.dupont@email.com"
+                               style="-fx-padding: 8;
+                                      -fx-border-radius: 4;
+                                      -fx-background-radius: 4;
+                                      -fx-border-color: #a7f3d0;
+                                      -fx-border-width: 1;
+                                      -fx-background-color: white;
+                                      -fx-font-size: 11;
+                                      -fx-text-fill: #333333;
+                                      -fx-max-width: Infinity;"/>
+                </VBox>
+
+                <!-- Téléphone -->
+                <VBox spacing="4">
+                    <Label text="Téléphone *"
+                           style="-fx-font-weight: bold;
+                                  -fx-text-fill: #333333;
+                                  -fx-font-size: 11;"/>
+                    <TextField fx:id="telephoneField"
+                               promptText="Ex: +221771234567"
+                               style="-fx-padding: 8;
+                                      -fx-border-radius: 4;
+                                      -fx-background-radius: 4;
+                                      -fx-border-color: #a7f3d0;
+                                      -fx-border-width: 1;
+                                      -fx-background-color: white;
+                                      -fx-font-size: 11;
+                                      -fx-text-fill: #333333;
+                                      -fx-max-width: Infinity;"/>
+                </VBox>
+            </VBox>
+
+            <!-- Droite : Adresse et Gestion -->
+            <VBox spacing="12"
+                  style="-fx-padding: 15;
+                         -fx-background-color: white;
+                         -fx-border-radius: 4;
+                         -fx-background-radius: 4;
+                         -fx-border-color: #a7f3d0;
+                         -fx-border-width: 1;
+                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+                         HBox.hgrow: ALWAYS;
+                         -fx-min-width: 0;
+                         -fx-pref-width: 300;">
+
+                <!-- Section Adresse -->
+                <VBox spacing="6">
+                    <Label text="🏠 Adresse"
+                           style="-fx-font-size: 13;
+                                  -fx-font-weight: bold;
+                                  -fx-text-fill: #0e7490;"/>
+
+                    <VBox spacing="4"
+                          style="VBox.vgrow: ALWAYS;">
+                        <Label text="Adresse Complète *"
+                               style="-fx-font-weight: bold;
+                                      -fx-text-fill: #333333;
+                                      -fx-font-size: 11;"/>
+                        <TextArea fx:id="adresseArea"
+                                  promptText="Entrez l'adresse complète..."
+                                  wrapText="true"
+                                  prefRowCount="4"
+                                  style="-fx-padding: 8;
+                                         -fx-border-radius: 4;
+                                         -fx-background-radius: 4;
+                                         -fx-border-color: #a7f3d0;
+                                         -fx-border-width: 1;
+                                         -fx-background-color: white;
+                                         -fx-font-size: 11;
+                                         -fx-text-fill: #333333;
+                                         -fx-control-inner-background: white;
+                                         -fx-max-width: Infinity;"
+                                  VBox.vgrow="ALWAYS"/>
+                    </VBox>
+                </VBox>
+
+                <!-- Séparateur visuel -->
+                <Separator style="-fx-padding: 0;
+                                  -fx-border-color: #e5e7eb;"/>
+
+                <!-- Section Gestion du compte -->
+                <VBox spacing="6">
+                    <Label text="⚙️ Gestion du Compte"
+                           style="-fx-font-size: 13;
+                                  -fx-font-weight: bold;
+                                  -fx-text-fill: #0e7490;"/>
+
+                    <!-- Statut -->
+                    <VBox spacing="4">
+                        <Label text="Statut *"
+                               style="-fx-font-weight: bold;
+                                      -fx-text-fill: #333333;
+                                      -fx-font-size: 11;"/>
+                        <ComboBox fx:id="statutComboBox"
+                                  style="-fx-padding: 8;
+                                         -fx-border-radius: 4;
+                                         -fx-background-radius: 4;
+                                         -fx-border-color: #a7f3d0;
+                                         -fx-border-width: 1;
+                                         -fx-background-color: white;
+                                         -fx-font-size: 11;
+                                         -fx-max-width: Infinity;"/>
+                    </VBox>
+
+                    <!-- Date d'inscription (lecture seule) -->
+                    <VBox spacing="4">
+                        <Label text="📅 Date d'Inscription"
+                               style="-fx-font-weight: bold;
+                                      -fx-text-fill: #333333;
+                                      -fx-font-size: 11;"/>
+                        <TextField fx:id="dateInscriptionField"
+                                   editable="false"
+                                   style="-fx-padding: 8;
+                                          -fx-border-radius: 4;
+                                          -fx-background-radius: 4;
+                                          -fx-border-color: #e5e7eb;
+                                          -fx-border-width: 1;
+                                          -fx-background-color: #f9fafb;
+                                          -fx-font-size: 11;
+                                          -fx-text-fill: #6b7280;
+                                          -fx-opacity: 0.9;
+                                          -fx-max-width: Infinity;"/>
+                    </VBox>
+                </VBox>
+            </VBox>
+        </HBox>
+
+        <!-- MESSAGE D'ERREUR -->
+        <VBox spacing="0"
+              style="-fx-padding: 10;
+                     -fx-margin: 15 0 0 0;
+                     -fx-background-color: #fee2e2;
+                     -fx-border-radius: 4;
+                     -fx-background-radius: 4;
+                     -fx-border-color: #dc2626;
+                     -fx-border-width: 1;
+                     -fx-max-width: Infinity;">
+
+            <Label fx:id="errorLabel"
+                   text=""
+                   style="-fx-text-fill: #dc2626;
+                          -fx-wrap-text: true;
+                          -fx-font-size: 10;
+                          -fx-font-weight: bold;
+                          -fx-max-width: Infinity;"/>
+        </VBox>
+
+    </VBox>
+</ScrollPane>

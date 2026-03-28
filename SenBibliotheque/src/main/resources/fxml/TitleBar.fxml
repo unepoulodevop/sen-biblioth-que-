@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<!-- Barre de titre personnalisée -->
+<HBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:id="titleBar"
+      style="-fx-background-color: #374151; -fx-padding: 0; -fx-spacing: 0; -fx-alignment: CENTER_LEFT;"
+      prefHeight="40">
+
+    <!-- Logo et Titre -->
+    <HBox style="-fx-padding: 0 15 0 15; -fx-alignment: CENTER_LEFT; -fx-spacing: 10;">
+        <Label text="📚" style="-fx-font-size: 18; -fx-text-fill: #d1d5db;"/>
+        <Label fx:id="titleLabel" text="SenBibliotheque"
+               style="-fx-text-fill: #d1d5db; -fx-font-size: 14; -fx-font-weight: bold;"/>
+    </HBox>
+
+    <!-- Espace vide pour drag -->
+    <Region HBox.hgrow="ALWAYS"/>
+
+    <!-- Boutons de contrôle -->
+    <HBox style="-fx-padding: 0; -fx-spacing: 0; -fx-alignment: CENTER;">
+        <!-- Minimize Button -->
+        <Button fx:id="minimizeBtn" text="─"
+                style="-fx-padding: 0; -fx-min-width: 40; -fx-min-height: 40; -fx-max-width: 40; -fx-max-height: 40; -fx-background-color: #374151; -fx-text-fill: #d1d5db; -fx-font-size: 16; -fx-border-radius: 0; -fx-background-radius: 0; -fx-cursor: hand;"
+                onMouseEntered="#onMinimizeHover"
+                onMouseExited="#onButtonExit"/>
+
+        <!-- Maximize Button -->
+        <Button fx:id="maximizeBtn" text="⬜"
+                style="-fx-padding: 0; -fx-min-width: 40; -fx-min-height: 40; -fx-max-width: 40; -fx-max-height: 40; -fx-background-color: #374151; -fx-text-fill: #d1d5db; -fx-font-size: 14; -fx-border-radius: 0; -fx-background-radius: 0; -fx-cursor: hand;"
+                onMouseEntered="#onMaximizeHover"
+                onMouseExited="#onButtonExit"/>
+
+        <!-- Close Button -->
+        <Button fx:id="closeBtn" text="✕"
+                style="-fx-padding: 0; -fx-min-width: 40; -fx-min-height: 40; -fx-max-width: 40; -fx-max-height: 40; -fx-background-color: #4b5563; -fx-text-fill: #d1d5db; -fx-font-size: 18; -fx-border-radius: 0; -fx-background-radius: 0; -fx-cursor: hand;"
+                onMouseEntered="#onCloseHover"
+                onMouseExited="#onButtonExit"/>
+    </HBox>
+</HBox>
