@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<ScrollPane style="-fx-background-color: #f0f9ff; -fx-padding: 0;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SenBibliotheque.controller.modules.AddUserDialogController">
+<ScrollPane style="-fx-background-color: #f0f9ff; -fx-padding: 0;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SenBibliotheque.entity.controller.modules.AddUserDialogController">
 
     <VBox spacing="0" style="-fx-padding: 50;                  -fx-background-color: #f0f9ff;">
 

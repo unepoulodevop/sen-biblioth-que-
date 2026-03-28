@@ -8,7 +8,7 @@
 <BorderPane styleClass="login-root"
             xmlns="http://javafx.com/javafx/25"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.SenBibliotheque.controller.LoginController">
+            fx:controller="com.example.SenBibliotheque.entity.controller.LoginController">
 
     <center>
         <StackPane alignment="CENTER">

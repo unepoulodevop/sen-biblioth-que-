@@ -1,4 +1,4 @@
-package com.example.SenBibliotheque.controller.modules;
+package com.example.SenBibliotheque.entity.controller.modules;
 
 import com.example.SenBibliotheque.entity.Categorie;
 import javafx.fxml.FXML;

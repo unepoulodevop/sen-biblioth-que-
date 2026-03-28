@@ -5,7 +5,7 @@
 
 <ScrollPane xmlns="http://javafx.com/javafx/21"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.SenBibliotheque.controller.modules.AddBookDialogController"
+            fx:controller="com.example.SenBibliotheque.entity.controller.modules.AddBookDialogController"
             style="-fx-background-color: #f0f9ff; -fx-padding: 0;">
 
     <VBox spacing="20" style="-fx-padding: 40; -fx-background-color: #f0f9ff;">

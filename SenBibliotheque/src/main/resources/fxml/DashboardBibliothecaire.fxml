@@ -13,7 +13,7 @@
             stylesheets="@../css/dashboard.css,@../css/sidebar.css"
             xmlns="http://javafx.com/javafx/25"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.SenBibliotheque.controller.DashboardBibliothecaireController">
+            fx:controller="com.example.SenBibliotheque.entity.controller.DashboardBibliothecaireController">
 
     <!-- TOP BAR PROFESSIONNELLE -->
     <top>

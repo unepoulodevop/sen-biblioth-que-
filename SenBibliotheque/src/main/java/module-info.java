@@ -28,8 +28,8 @@ module com.SenBibliotheque {
     opens com.example.SenBibliotheque.entity to org.hibernate.orm.core;
     opens com.example.SenBibliotheque.config to org.hibernate.orm.core;
     opens com.example.SenBibliotheque to javafx.fxml;
-    opens com.example.SenBibliotheque.controller to javafx.fxml;
-    opens com.example.SenBibliotheque.controller.modules to javafx.fxml;
+    opens com.example.SenBibliotheque.entity.controller to javafx.fxml;
+    opens com.example.SenBibliotheque.entity.controller.modules to javafx.fxml;
 
     // Exporter les packages publics
     exports com.example.SenBibliotheque;

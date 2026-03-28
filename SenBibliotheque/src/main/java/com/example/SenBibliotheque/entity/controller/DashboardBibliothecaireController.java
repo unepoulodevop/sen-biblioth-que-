@@ -1,4 +1,4 @@
-package com.example.SenBibliotheque.controller;
+package com.example.SenBibliotheque.entity.controller;
 
 import com.example.SenBibliotheque.entity.Utilisateur;
 import com.example.SenBibliotheque.util.SessionManager;

@@ -1,4 +1,4 @@
-package com.example.SenBibliotheque.controller.modules;
+package com.example.SenBibliotheque.entity.controller.modules;
 
 import com.example.SenBibliotheque.entity.Adherent;
 import com.example.SenBibliotheque.service.AdherentService;

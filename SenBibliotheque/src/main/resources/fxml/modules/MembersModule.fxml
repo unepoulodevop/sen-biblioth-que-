@@ -6,7 +6,7 @@
 
 <VBox xmlns="http://javafx.com/javafx/21"
       xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.example.SenBibliotheque.controller.modules.MembersModuleController"
+      fx:controller="com.example.SenBibliotheque.entity.controller.modules.MembersModuleController"
       spacing="15"
       style="-fx-padding: 20; -fx-background-color: #f0f9ff;">
 

@@ -1,4 +1,4 @@
-package com.example.SenBibliotheque.controller;
+package com.example.SenBibliotheque.entity.controller;
 
 import javafx.animation.TranslateTransition;
 import javafx.application.Platform;

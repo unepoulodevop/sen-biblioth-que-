@@ -1,4 +1,4 @@
-package com.example.SenBibliotheque.controller;
+package com.example.SenBibliotheque.entity.controller;
 
 import javafx.fxml.FXML;
 import javafx.geometry.Rectangle2D;

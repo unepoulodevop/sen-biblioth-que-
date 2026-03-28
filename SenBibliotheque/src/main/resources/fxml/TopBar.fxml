@@ -5,7 +5,7 @@
 <?import javafx.geometry.Insets?>
 
 <HBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.example.SenBibliotheque.controller.TopBarController"
+      fx:controller="com.example.SenBibliotheque.entity.controller.TopBarController"
       style="-fx-background-color: #f8f9fa; -fx-padding: 8; -fx-alignment: CENTER_RIGHT; -fx-spacing: 8; -fx-border-color: #e5e7eb; -fx-border-width: 0 0 1 0;">
 
     <!-- Espacement flexible -->

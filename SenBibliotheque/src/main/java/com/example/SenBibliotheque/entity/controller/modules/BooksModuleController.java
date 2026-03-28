@@ -1,4 +1,4 @@
-package com.example.SenBibliotheque.controller.modules;
+package com.example.SenBibliotheque.entity.controller.modules;
 
 import com.example.SenBibliotheque.entity.Livre;
 import com.example.SenBibliotheque.entity.Categorie;
